@@ -1,0 +1,13 @@
+<header>
+  <h1 class="title">{{title}}</h1>
+</header>
+<main class="container">
+   <ul class="list-group">
+     <li *ngFor="let employee of arrayEmployee" class="list-group-item list-group-item-action">
+       <span class="badge badge-primary">{{employee.id}}</span>
+       {{employee.name}} - {{employee.country}}
+     </li>
+   </ul>
+  
+</main>
+

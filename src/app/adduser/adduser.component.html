@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="card-title">Insert a new Employee</div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="selectedEmployee.name" placeholder="Insert a Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="selectedEmployee.country" placeholder="Insert a Country" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="button"  class="btn btn-success"
+                    (click)="addUser(selectedEmployee)">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

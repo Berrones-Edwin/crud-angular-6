@@ -1,0 +1,38 @@
+
+<div class="container  mt-5">
+  <form  action="" class="card" >
+    <legend class="m-3">Editar información del usuario</legend>
+    <div class="form-group">
+      <select (change)="seeData($event)" class="form-control">
+        <option 
+              [value]="employee.name + ',' + employee + ',' + employee.id" 
+              *ngFor="let employee of arrayEmployee">
+          {{employee.name}}
+        </option>
+      </select>
+    </div>
+    <div *ngIf="selectedEmployee" class="form-group">
+        <input class="form-control" type="text" 
+        autocomplete="off"
+        readonly
+        [(ngModel)]="employee.id" name="id" id="">
+      </div>
+    <div *ngIf="selectedEmployee" class="form-group">
+      <input class="form-control" type="text"
+      autocomplete="off"
+      placeholder="Insert a name" 
+      [(ngModel)]="employee.name" name="name" id="">
+    </div>
+    <div *ngIf="selectedEmployee" class="form-group">
+      <input class="form-control" type="text" 
+      autocomplete="off"
+      placeholder="Insert a country"
+      [(ngModel)]="employee.country" name="country" id="">
+    </div>
+    <div *ngIf="selectedEmployee" class="form-group">
+      <button class="btn btn-success"
+        (click)="editUser(employee)">edit user</button>
+    </div>
+  </form>
+
+</div>
